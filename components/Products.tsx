@@ -1,5 +1,8 @@
 import React, { MouseEvent } from 'react';
 import { motion, useMotionValue, useSpring, useTransform, useMotionTemplate } from 'framer-motion';
+import colloidalSilicaImg from '../images/sodium_silica.png';
+import sodiumSilicateImg from '../images/sodium_silicate.png';
+import textileAdhesiveImg from '../images/textile_adhesive.png';
 
 interface Product {
   id: number;
@@ -13,19 +16,19 @@ const products: Product[] = [
     id: 1,
     title: "Colloidal Silica",
     description: "High-purity colloidal silica solutions designed for precision polishing, advanced coatings, and catalyst applications.",
-    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800"
+    image: colloidalSilicaImg
   },
   {
     id: 2,
     title: "Sodium Silicate",
     description: "Versatile sodium silicate solutions optimized for industrial adhesives, detergent formulations, and binding applications.",
-    image: "https://images.unsplash.com/photo-1605557202138-09511110007d?auto=format&fit=crop&q=80&w=800"
+    image: sodiumSilicateImg
   },
   {
     id: 3,
     title: "Textile Adhesive",
     description: "Specialized adhesive solutions engineered specifically for high-strength textile and fabric bonding applications.",
-    image: "https://images.unsplash.com/photo-1626298816922-824b2344737a?auto=format&fit=crop&q=80&w=800"
+    image: textileAdhesiveImg
   }
 ];
 
@@ -48,10 +51,10 @@ const TiltCard: React.FC<{ product: Product; index: number }> = ({ product, inde
     const height = rect.height;
     const mouseXPos = e.clientX - rect.left;
     const mouseYPos = e.clientY - rect.top;
-    
+
     const xPct = mouseXPos / width - 0.5;
     const yPct = mouseYPos / height - 0.5;
-    
+
     x.set(xPct);
     y.set(yPct);
   };
@@ -79,28 +82,28 @@ const TiltCard: React.FC<{ product: Product; index: number }> = ({ product, inde
         className="bg-white rounded-2xl shadow-lg border border-gray-100 flex flex-col h-full overflow-hidden group"
       >
         {/* Image Section */}
-        <div 
-          className="h-56 w-full overflow-hidden relative bg-gray-100"
+        <div
+          className="h-56 w-full relative bg-white flex items-center justify-center p-4"
           style={{ transform: "translateZ(20px)" }}
         >
-          <img 
-            src={product.image} 
+          <img
+            src={product.image}
             alt={product.title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+            className="max-w-full max-h-full object-contain transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-[#1E3A5F]/10 group-hover:bg-transparent transition-colors duration-300"></div>
+          <div className="absolute inset-0 pointer-events-none rounded-2xl border border-gray-100"></div>
         </div>
-        
+
         {/* Content Section */}
         <div className="p-8 flex flex-col flex-grow">
-          <h3 
+          <h3
             className="text-2xl font-bold text-[#2D2D2D] mb-4"
             style={{ transform: "translateZ(30px)" }}
           >
             {product.title}
           </h3>
-          
-          <p 
+
+          <p
             className="text-[#6B7280] leading-relaxed mb-6 flex-grow"
             style={{ transform: "translateZ(20px)" }}
           >
@@ -117,7 +120,7 @@ const Products: React.FC = () => {
     <section id="products" className="py-24 bg-[#FAFAFA]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -127,7 +130,7 @@ const Products: React.FC = () => {
             Our Products
             <span className="block w-20 h-1 bg-[#4A9B9B] mx-auto mt-4 rounded-full"></span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
