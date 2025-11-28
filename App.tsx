@@ -19,7 +19,7 @@ const App: React.FC = () => {
         <Products />
         <About />
         <Contact />
-        <MapSection />
+        {/* <MapSection /> */}
       </main>
       <Footer />
       <FloatingContact />

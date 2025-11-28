@@ -5,14 +5,14 @@ import { Calendar, Globe, Smile } from 'lucide-react';
 const stats = [
   {
     id: 1,
-    value: 15,
+    value: 27,
     suffix: "+",
     label: "Years of Experience",
     icon: Calendar
   },
   {
     id: 2,
-    value: 50,
+    value: 10,
     suffix: "+",
     label: "Countries Exported",
     icon: Globe
@@ -29,11 +29,11 @@ const stats = [
 const StatCard: React.FC<{ stat: typeof stats[0] }> = ({ stat }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  
-  // A simple count-up implementation could be more complex, 
-  // but for pure React/Framer without extra libs this visual fade works well 
+
+  // A simple count-up implementation could be more complex,
+  // but for pure React/Framer without extra libs this visual fade works well
   // or we simulate it. To keep it robust without extra deps, we'll animate opacity/slide.
-  
+
   return (
     <motion.div
       ref={ref}

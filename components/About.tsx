@@ -36,17 +36,17 @@ const About: React.FC = () => {
         </div>
 
         {/* Small molecular dots */}
-        <motion.div 
+        <motion.div
           className="absolute top-20 right-20 w-4 h-4 bg-[#1E3A5F] rounded-full opacity-20"
           animate={{ y: [0, -20, 0], opacity: [0.2, 0.5, 0.2] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-40 left-10 w-6 h-6 bg-[#4A9B9B] rounded-full opacity-20"
           animate={{ y: [0, 30, 0], x: [0, 10, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
-        <motion.div 
+        <motion.div
           className="absolute top-1/2 left-1/2 w-3 h-3 bg-[#2D2D2D] rounded-full opacity-10"
           animate={{ y: [0, -40, 0], x: [0, -20, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
@@ -55,7 +55,7 @@ const About: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12">
-          
+
           <div className="w-full md:w-1/2">
              <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -64,9 +64,9 @@ const About: React.FC = () => {
                 transition={{ duration: 1 }}
                 className="relative rounded-2xl overflow-hidden shadow-2xl"
              >
-                <img 
-                  src="https://picsum.photos/800/600" 
-                  alt="Industrial Chemical Facility" 
+                <img
+                  src="https://picsum.photos/800/600"
+                  alt="Industrial Chemical Facility"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-[#1E3A5F]/20 mix-blend-multiply"></div>
@@ -74,7 +74,7 @@ const About: React.FC = () => {
           </div>
 
           <div className="w-full md:w-1/2 space-y-6">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -83,18 +83,18 @@ const About: React.FC = () => {
             >
               About Interex Industries
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-[#6B7280] leading-relaxed"
             >
-              With over 15 years of experience in chemical manufacturing, Interex Industries has established itself as a trusted name in producing high-quality silica and adhesive solutions. We are committed to innovation and excellence in every batch we produce.
+              With over 27 years of experience in chemical manufacturing, Interex Industries has established itself as a trusted name in producing high-quality silica and adhesive solutions. We are committed to innovation and excellence in every batch we produce.
             </motion.p>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -103,8 +103,8 @@ const About: React.FC = () => {
             >
               Based in Rajkot, Gujarat, we pride ourselves on delivering consistent quality, competitive pricing, and reliable service to clients across 50+ countries. Our logistical expertise ensures your materials arrive safely and on time.
             </motion.p>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}

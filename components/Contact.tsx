@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -18,9 +18,9 @@ const Contact: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          
+
           {/* Contact Info */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
             className="space-y-8"
           >
              <h3 className="text-2xl font-semibold text-[#1E3A5F]">Contact Information</h3>
-             
+
              <div className="space-y-6">
                <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="flex items-start gap-4 p-4 rounded-xl hover:bg-[#F5F0E8] transition-colors group">
                  <div className="bg-[#4A9B9B]/10 p-3 rounded-full text-[#4A9B9B] group-hover:bg-[#4A9B9B] group-hover:text-white transition-colors">
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -77,22 +77,22 @@ const Contact: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-[#2D2D2D] mb-2">Name</label>
-                  <input type="text" id="name" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#4A9B9B] focus:ring-1 focus:ring-[#4A9B9B] outline-none transition-all" placeholder="John Doe" />
+                  <input type="text" id="name" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#4A9B9B] focus:ring-1 focus:ring-[#4A9B9B] outline-none transition-all" placeholder="Enter your name" />
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-[#2D2D2D] mb-2">Phone</label>
-                  <input type="tel" id="phone" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#4A9B9B] focus:ring-1 focus:ring-[#4A9B9B] outline-none transition-all" placeholder="+91..." />
+                  <input type="tel" id="phone" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#4A9B9B] focus:ring-1 focus:ring-[#4A9B9B] outline-none transition-all" placeholder="Enter your phone number" />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-[#2D2D2D] mb-2">Email</label>
-                <input type="email" id="email" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#4A9B9B] focus:ring-1 focus:ring-[#4A9B9B] outline-none transition-all" placeholder="john@example.com" />
+                <input type="email" id="email" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#4A9B9B] focus:ring-1 focus:ring-[#4A9B9B] outline-none transition-all" placeholder="Enter your email" />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-[#2D2D2D] mb-2">Message</label>
-                <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#4A9B9B] focus:ring-1 focus:ring-[#4A9B9B] outline-none transition-all resize-none" placeholder="How can we help you?"></textarea>
+                <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#4A9B9B] focus:ring-1 focus:ring-[#4A9B9B] outline-none transition-all resize-none" placeholder="Enter your message"></textarea>
               </div>
 
               <button type="submit" className="w-full bg-[#4A9B9B] text-white font-semibold py-4 rounded-lg hover:bg-[#3d8282] transition-colors flex items-center justify-center gap-2 group shadow-md hover:shadow-lg">
