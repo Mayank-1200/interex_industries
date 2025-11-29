@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import interexImage from '../images/interex_industries.png';
 
 const FloatingParticle: React.FC<{ delay: number; x: number[]; y: number[]; size: number }> = ({ delay, x, y, size }) => {
   return (
@@ -65,8 +66,8 @@ const About: React.FC = () => {
                 className="relative rounded-2xl overflow-hidden shadow-2xl"
              >
                 <img
-                  src="https://picsum.photos/800/600"
-                  alt="Industrial Chemical Facility"
+                  src={interexImage}
+                  alt="Interex Industries Facility"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-[#1E3A5F]/20 mix-blend-multiply"></div>
@@ -101,7 +102,7 @@ const About: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-[#6B7280] leading-relaxed"
             >
-              Based in Rajkot, Gujarat, we pride ourselves on delivering consistent quality, competitive pricing, and reliable service to clients across 50+ countries. Our logistical expertise ensures your materials arrive safely and on time.
+              Based in Rajkot, Gujarat, we pride ourselves on delivering consistent quality, competitive pricing, and reliable service to clients across 10+ countries. Our logistical expertise ensures your materials arrive safely and on time.
             </motion.p>
 
             <motion.p
