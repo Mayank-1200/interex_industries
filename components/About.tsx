@@ -21,7 +21,7 @@ const FloatingParticle: React.FC<{ delay: number; x: number[]; y: number[]; size
     />
   );
 };
-
+/*hello world*/
 const About: React.FC = () => {
   return (
     <section id="about" className="py-24 bg-[#F5F0E8] relative overflow-hidden">
